@@ -9,11 +9,10 @@ const VisualSort = () => {
   }
 
   const startArray = () => {
-    for (let i = 0; i < 25; i++) {
-      generatedArray.push(getRandomInt(10, 200));
+    for (let i = 0; i < 40; i++) {
+      generatedArray.push(getRandomInt(10, 400));
     }
     console.log(generatedArray);
-
   };
 
   useEffect(() => {
@@ -22,9 +21,13 @@ const VisualSort = () => {
   }, []);
 
   return (
-    <div>
-      {barArray.map((value, index) => (
-        <div>{value}</div>
+    <div className="back-bar">
+      {barArray.map((value, id) => (
+        <div
+          className="bar-color"
+          key={id}
+          style={{ height: `${value}px` }}
+        ></div>
       ))}
     </div>
   );

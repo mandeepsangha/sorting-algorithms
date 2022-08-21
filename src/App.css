@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+.bar-color {
+  width: 0.4rem;
+  background-color: aqua;
+  margin: 1rem 0.2rem;
+  display: inline-block;
+}
+
+.back-bar {
+  background: grey;
+  margin: 0.5rem;
+  display: absolute;
+  height: 72vh;
+}
