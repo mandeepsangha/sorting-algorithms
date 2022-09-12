@@ -29,6 +29,7 @@ const VisualSort = () => {
           style={{ height: `${value}px` }}
         ></div>
       ))}
+      <btn>Sort Button</btn>
     </div>
   );
 };
