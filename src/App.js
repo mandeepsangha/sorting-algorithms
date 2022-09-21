@@ -1,5 +1,5 @@
 import "./App.css";
-import VisualSort from "./VisualSort";
+import VisualSort from "./Components/VisualSort";
 
 function App() {
   return (
