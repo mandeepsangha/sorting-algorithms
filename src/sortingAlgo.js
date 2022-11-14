@@ -15,7 +15,7 @@ function BubbleSort(array) {
   return array;
 }
 
-//export default BubbleSort;
+export default BubbleSort;
 
 let array2 = BubbleSort([0, 7, 4, 2, 1, 3]);
 

@@ -1,4 +1,5 @@
 import { render } from "@testing-library/react";
+
 import React, { useState, useEffect } from "react";
 
 const VisualSort = () => {
@@ -20,6 +21,23 @@ const VisualSort = () => {
     SetBarArray(generatedArray);
   }, []);
 
+  function BubbleSort(array) {
+    //let swapped;
+    let n = array.length;
+
+    for (let j = 0; j < n - 1; j++) {
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] > array[i + 1]) {
+          let storeHigherNumber = array[i];
+          array[i] = array[i + 1];
+          array[i + 1] = storeHigherNumber;
+        }
+      }
+    }
+
+    return array;
+  }
+
   return (
     <div className="back-bar">
       {barArray.map((value, id) => (
@@ -29,7 +47,13 @@ const VisualSort = () => {
           style={{ height: `${value}px` }}
         ></div>
       ))}
-      <btn>Sort Button</btn>
+      <button
+        onClick={() => {
+          BubbleSort(barArray);
+        }}
+      >
+        Sort Button
+      </button>
     </div>
   );
 };
